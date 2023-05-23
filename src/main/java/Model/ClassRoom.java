@@ -1,6 +1,10 @@
 package Model;
+
 import lombok.*;
+
 import javax.persistence.*;
+import java.util.List;
+
 @Data
 @Setter
 @Getter
@@ -10,5 +14,7 @@ public class ClassRoom {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String classNo;
-    // one class many student
+    @OneToMany
+    List<Course>courses;
+
 }
