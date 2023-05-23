@@ -22,5 +22,10 @@ public class StudentController {
         return studentServices.getById(id);
     }
 
+    @PostMapping("/addStudent")
+    public Student addStudent (@RequestBody Student student){
+        return studentServices.addStudent(student);
+    }
+
 }
 
