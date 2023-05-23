@@ -14,7 +14,7 @@ public class StudentServices {
 
     public List<Student> getAllStudents(){
         return studentRepository.findAll();
-
     }
+
 
 }
