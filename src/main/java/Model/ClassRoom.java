@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Setter
 @Getter
 @Entity
-public class Class {
+public class ClassRoom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
