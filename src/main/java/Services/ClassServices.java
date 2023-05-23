@@ -15,6 +15,6 @@ public class ClassServices {
     public List<Class> getAllClasses(){
         return classRepository.findAll();
 
-    }
+
 }
 
