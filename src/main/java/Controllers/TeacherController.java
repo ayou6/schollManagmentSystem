@@ -20,4 +20,8 @@ public class TeacherController {
     public Teacher getById(@PathVariable("id") Long id){
         return  teacherServices.getById(id);}
 
+    @PostMapping("/addTeachers")
+    public Teacher addTeachers (@RequestBody Teacher teacher){
+        return teacherServices.addTecher(teacher);
+    }
 }
