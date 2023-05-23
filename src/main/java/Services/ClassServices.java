@@ -18,8 +18,8 @@ public class ClassServices {
     public Class getById(Long id){
         return classRepository.findById(id).get();
     }
-    public Class addClasses (Class class){
-        return classRepository.save(class);
+    public Class addClasses (Class class1){
+        return classRepository.save(class1);
     }
 
 }
