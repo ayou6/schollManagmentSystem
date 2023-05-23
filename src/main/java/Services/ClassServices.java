@@ -1,5 +1,6 @@
 package Services;
 
+import Model.ClassRoom;
 import Repository.ClassRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,14 +13,14 @@ public class ClassServices {
     @Autowired
     ClassRepository classRepository;
 
-    public List<Class> getAllClasses(){
+    public List<ClassRoom> getAllClasses(){
         return classRepository.findAll();
     }
-    public Class getById(Long id){
+    public ClassRoom getById(Long id){
         return classRepository.findById(id).get();
     }
-    public Class addClasses (Class class1){
-        return classRepository.save(class1);
+    public ClassRoom addClasses (ClassRoom classroom){
+        return classRepository.save(classroom);
     }
 
 }
