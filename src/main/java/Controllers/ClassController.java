@@ -13,6 +13,10 @@ import java.util.List;
 public class ClassController {
     @Autowired
     ClassServices classServices;
+    @GetMapping("/getAll")
+    public List<Class> getAllClasses(){
+        return classServices.getAllClasses();
+    }
 
 
 }
