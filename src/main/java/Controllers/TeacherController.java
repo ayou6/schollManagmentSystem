@@ -10,7 +10,12 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "teacher")
 public class TeacherController {
-
+    @Autowired
+    TeacherServices teacherServices;
+    @GetMapping("/getAll")
+    public List<Teacher> getAllTeachers(){
+        return teacherServices.getAllTeachers();
+    }
 
 
 }
