@@ -16,6 +16,8 @@ public class TeacherController {
     public List<Teacher> getAllTeachers(){
         return teacherServices.getAllTeachers();
     }
-
+    @GetMapping("{id}")
+    public Teacher getById(@PathVariable("id") Long id){
+        return  teacherServices.getById(id);}
 
 }
