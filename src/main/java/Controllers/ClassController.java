@@ -19,6 +19,8 @@ public class ClassController {
     public Class getById(@PathVariable("id") Long id){
         return classServices.getById(id);
     }
-
-
+    @PostMapping("/addClasses")
+    public Class addClasses (@RequestBody Class class1){
+        return classServices.addClasses(class1);
+    }
 }
