@@ -15,7 +15,9 @@ public class ClassController {
     public List<Class> getAllClasses(){
         return classServices.getAllClasses();
     }
-
-
+    @GetMapping("{id}")
+    public Class getById(@PathVariable("id") Long id){
+        return classServices.getById(id);
+    }
 
 }
