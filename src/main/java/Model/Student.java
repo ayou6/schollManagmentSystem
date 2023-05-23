@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Setter
@@ -18,6 +19,5 @@ public class Student {
     private String nationality;
     private String grade;
 @OneToMany
-    StudentCourses studentCourses;
-
+List<StudentCourses> studentCourses;
 }
