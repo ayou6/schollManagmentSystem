@@ -20,6 +20,6 @@ public class StudentServices {
         return studentRepository.findById(id).get();
     }
 
-
+    public Student addStudent(Student student){ return studentRepository.save(student);}
 
 }
