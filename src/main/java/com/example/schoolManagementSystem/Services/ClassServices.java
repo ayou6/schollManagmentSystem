@@ -26,5 +26,10 @@ public class ClassServices {
         return classRepository.save(classroom);
     }
 
+    public ResponseEntity<Void> deleteClass(Long id) {
+        classRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
 
