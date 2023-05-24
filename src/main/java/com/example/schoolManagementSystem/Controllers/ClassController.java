@@ -1,7 +1,7 @@
-package Controllers;
+package com.example.schoolManagementSystem.Controllers;
 
-import Model.ClassRoom;
-import Services.ClassServices;
+import com.example.schoolManagementSystem.Model.ClassRoom;
+import com.example.schoolManagementSystem.Services.ClassServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,16 +12,19 @@ import java.util.List;
 public class ClassController {
     @Autowired
     ClassServices classServices;
+
     @GetMapping("/getAll")
-    public List<ClassRoom> getAllClasses(){
+    public List<ClassRoom> getAllClasses() {
         return classServices.getAllClasses();
     }
+
     @GetMapping("{id}")
-    public ClassRoom getById(@PathVariable("id") Long id){
+    public ClassRoom getById(@PathVariable("id") Long id) {
         return classServices.getById(id);
     }
+
     @PostMapping("/addClasses")
-    public ClassRoom addClasses (@RequestBody ClassRoom classroom){
+    public ClassRoom addClasses(@RequestBody ClassRoom classroom) {
         return classServices.addClasses(classroom);
     }
 }
