@@ -1,7 +1,6 @@
 package com.example.schoolManagementSystem.Controllers;
 
 import com.example.schoolManagementSystem.Model.Student;
-import com.example.schoolManagementSystem.Model.Teacher;
 import com.example.schoolManagementSystem.Requests.AddStudentRequest;
 import com.example.schoolManagementSystem.Responses.AddStudentResponse;
 import com.example.schoolManagementSystem.Services.StudentServices;
