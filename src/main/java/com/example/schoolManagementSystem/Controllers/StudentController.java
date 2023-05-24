@@ -26,6 +26,5 @@ public class StudentController {
     public Student addStudent (@RequestBody Student student){
         return studentServices.addStudent(student);
     }
-
 }
 
