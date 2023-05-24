@@ -1,11 +1,9 @@
 package com.example.schoolManagementSystem.Controllers;
-
 import com.example.schoolManagementSystem.Model.Teacher;
 import com.example.schoolManagementSystem.Services.TeacherServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
