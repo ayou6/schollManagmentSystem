@@ -1,7 +1,6 @@
-package Repository;
+package com.example.schoolManagementSystem.Repository;
 
-import Model.Student;
-import Model.Teacher;
+import com.example.schoolManagementSystem.Model.Teacher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

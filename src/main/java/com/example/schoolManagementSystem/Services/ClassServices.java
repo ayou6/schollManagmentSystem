@@ -1,7 +1,7 @@
-package Services;
+package com.example.schoolManagementSystem.Services;
 
-import Model.ClassRoom;
-import Repository.ClassRepository;
+import com.example.schoolManagementSystem.Model.ClassRoom;
+import com.example.schoolManagementSystem.Repository.ClassRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,13 +13,15 @@ public class ClassServices {
     @Autowired
     ClassRepository classRepository;
 
-    public List<ClassRoom> getAllClasses(){
+    public List<ClassRoom> getAllClasses() {
         return classRepository.findAll();
     }
-    public ClassRoom getById(Long id){
+
+    public ClassRoom getById(Long id) {
         return classRepository.findById(id).get();
     }
-    public ClassRoom addClasses (ClassRoom classroom){
+
+    public ClassRoom addClasses(ClassRoom classroom) {
         return classRepository.save(classroom);
     }
 

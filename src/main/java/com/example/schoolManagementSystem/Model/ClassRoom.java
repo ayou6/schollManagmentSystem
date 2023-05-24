@@ -1,4 +1,4 @@
-package Model;
+package com.example.schoolManagementSystem.Model;
 
 import lombok.*;
 
@@ -15,6 +15,6 @@ public class ClassRoom {
     private Long id;
     private String classNo;
     @OneToMany
-    List<Course>courses;
+    List<Course> courses;
 
 }

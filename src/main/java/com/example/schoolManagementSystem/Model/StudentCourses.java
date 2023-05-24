@@ -1,4 +1,5 @@
-package Model;
+package com.example.schoolManagementSystem.Model;
+
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -11,10 +12,10 @@ import javax.persistence.Id;
 @Getter
 @Entity
 public class StudentCourses {
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
-   private int grades;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private int grades;
 
 
 }
