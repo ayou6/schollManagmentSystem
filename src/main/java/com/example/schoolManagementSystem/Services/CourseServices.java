@@ -3,6 +3,7 @@ package com.example.schoolManagementSystem.Services;
 import com.example.schoolManagementSystem.Model.Course;
 import com.example.schoolManagementSystem.Repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,4 +24,12 @@ public class CourseServices {
     public Course addCourse(Course course) {
         return courseRepository.save(course);
     }
+
+    public Course editCourse (Course course,Long id){
+        course.setId(id);
+        return courseRepository.save(course);
+    }
+    public ResponseEntity<Void> deleteCourse (Long id){
+        courseRepository.deleteById(id);
+        return ResponseEntity.noContent().build();     }
 }

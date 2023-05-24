@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 @Data
 @Setter
@@ -16,6 +17,10 @@ public class Student {
     private String name;
     private String nationality;
     private String grade;
+
+    private Date createdDate;
+    private Boolean isActive;
+    private Date updatedDate;
     @OneToMany
     List<StudentCourses> studentCourses;
 }

@@ -27,5 +27,12 @@ public class CourseController {
     public Course addCourse(@RequestBody Course course) {
         return courseServices.addCourse(course);
     }
+    @PutMapping("/course/{id}")
+    public Course editCourse (@RequestBody Course course,@PathVariable Long id){
+        Course newCourse = courseServices.getByID(id);
+        newCourse.setName(course.getName());
+        return courseServices.editCourse(newCourse,id);
+    }
+
 }
 

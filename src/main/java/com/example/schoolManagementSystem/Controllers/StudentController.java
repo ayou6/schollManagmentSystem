@@ -1,10 +1,13 @@
 package com.example.schoolManagementSystem.Controllers;
 
 import com.example.schoolManagementSystem.Model.Student;
+import com.example.schoolManagementSystem.Requests.AddStudentRequest;
+import com.example.schoolManagementSystem.Responses.AddStudentResponse;
 import com.example.schoolManagementSystem.Services.StudentServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -23,8 +26,18 @@ public class StudentController {
     }
 
     @PostMapping("/addStudent")
-    public Student addStudent (@RequestBody Student student){
-        return studentServices.addStudent(student);
+    public AddStudentResponse addStudent (@RequestBody AddStudentRequest studentRequest){
+
+        Student savedStudent = studentServices.addStudent(studentRequest.convertToStudent());
+
+        AddStudentResponse response = new AddStudentResponse(
+                savedStudent.getId(),
+                savedStudent.getName(),
+                savedStudent.getNationality(),
+                savedStudent.getCreatedDate()
+        );
+
+        return response;
     }
 }
 
