@@ -1,8 +1,10 @@
 package com.example.schoolManagementSystem.Controllers;
 
 import com.example.schoolManagementSystem.Model.Course;
+import com.example.schoolManagementSystem.Model.Teacher;
 import com.example.schoolManagementSystem.Services.CourseServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,6 +34,10 @@ public class CourseController {
         Course newCourse = courseServices.getByID(id);
         newCourse.setName(course.getName());
         return courseServices.editCourse(newCourse,id);
+    }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteCourse (@RequestBody Course course, @PathVariable Long id){
+        return courseServices.deleteCourse(id);
     }
 
 }
