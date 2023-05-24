@@ -3,6 +3,7 @@ package com.example.schoolManagementSystem.Controllers;
 import com.example.schoolManagementSystem.Model.ClassRoom;
 import com.example.schoolManagementSystem.Services.ClassServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,4 +28,10 @@ public class ClassController {
     public ClassRoom addClasses(@RequestBody ClassRoom classroom) {
         return classServices.addClasses(classroom);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteClass (@RequestBody ClassRoom classRoom, @PathVariable Long id){
+        return classServices.deleteClass(id);
+    }
 }
+
