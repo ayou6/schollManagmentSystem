@@ -1,5 +1,4 @@
 package com.example.schoolManagementSystem.Services;
-
 import com.example.schoolManagementSystem.Model.ClassRoom;
 import com.example.schoolManagementSystem.Repository.ClassRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,9 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
-
 public class ClassServices {
     @Autowired
     ClassRepository classRepository;
