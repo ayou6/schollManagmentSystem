@@ -1,11 +1,9 @@
 package com.example.schoolManagementSystem.Model;
-
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-
 @Data
 @Setter
 @Getter
@@ -18,5 +16,4 @@ public class Teacher {
     private String courseName;
     @OneToOne
     Course course;
-
 }
