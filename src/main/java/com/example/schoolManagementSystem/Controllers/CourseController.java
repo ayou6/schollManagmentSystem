@@ -27,7 +27,5 @@ public class CourseController {
     public Course addCourse(@RequestBody Course course) {
         return courseServices.addCourse(course);
     }
-
-
 }
 
