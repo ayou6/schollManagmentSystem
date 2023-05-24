@@ -1,10 +1,12 @@
 package com.example.schoolManagementSystem.Controllers;
 
 import com.example.schoolManagementSystem.Model.Student;
+import com.example.schoolManagementSystem.Model.Teacher;
 import com.example.schoolManagementSystem.Requests.AddStudentRequest;
 import com.example.schoolManagementSystem.Responses.AddStudentResponse;
 import com.example.schoolManagementSystem.Services.StudentServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -34,10 +36,12 @@ public class StudentController {
                 savedStudent.getId(),
                 savedStudent.getName(),
                 savedStudent.getNationality(),
-                savedStudent.getCreatedDate()
-        );
+                savedStudent.getCreatedDate());
+            return response;}
 
-        return response;
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteStudent (@RequestBody Student student, @PathVariable Long id){
+        return studentServices.deleteStudent(id);
     }
 }
 
