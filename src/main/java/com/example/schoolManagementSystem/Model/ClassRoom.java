@@ -1,10 +1,8 @@
 package com.example.schoolManagementSystem.Model;
-
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
-
 @Data
 @Setter
 @Getter
@@ -16,5 +14,4 @@ public class ClassRoom {
     private String classNo;
     @OneToMany
     List<Course> courses;
-
 }
