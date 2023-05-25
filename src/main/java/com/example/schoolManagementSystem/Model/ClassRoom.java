@@ -13,6 +13,7 @@ public class ClassRoom {
     private Long id;
     private String classNo;
     private int size;
+    private boolean isActive;
     @OneToMany
     List<Course> courses;
 }
