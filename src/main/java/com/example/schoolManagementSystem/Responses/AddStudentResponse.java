@@ -16,4 +16,5 @@ public class AddStudentResponse {
     private int age;
     private String email;
     private Date createdDate;
+    private boolean isActive;
 }
