@@ -30,8 +30,6 @@ public class TeacherServices {
         return teacherRepository.save(teacher);
     }
 
-    public ResponseEntity<Void> deleteTeacher (Long id){
-        teacherRepository.deleteById(id);
-        return ResponseEntity.noContent().build();    }
+    public void deleteClass(Long id) { teacherRepository.deleteById(id);}
 
 }
