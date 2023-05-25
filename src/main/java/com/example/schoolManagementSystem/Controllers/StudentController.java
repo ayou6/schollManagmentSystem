@@ -34,8 +34,8 @@ public class StudentController {
         AddStudentResponse response = new AddStudentResponse(
                 savedStudent.getId(),
                 savedStudent.getName(),
-                savedStudent.getAge(),
                 savedStudent.getGender(),
+                savedStudent.getAge(),
                 savedStudent.getEmail(),
                 savedStudent.getCreatedDate());
         return response;}
