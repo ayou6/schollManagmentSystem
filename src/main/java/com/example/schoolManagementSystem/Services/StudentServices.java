@@ -24,8 +24,6 @@ public class StudentServices {
     public Student addStudent(Student student) {
         return studentRepository.save(student);
     }
-    public ResponseEntity<Void> deleteStudent (Long id){
-        studentRepository.deleteById(id);
-        return ResponseEntity.noContent().build();    }
+    public void deleteStudent(Long id) { studentRepository.deleteById(id);}
 
 }
