@@ -15,6 +15,7 @@ public class Teacher {
     private String name;
     private int phone;
     private String Specialization;
+    private int age;
     @OneToOne
     Course course;
 }
