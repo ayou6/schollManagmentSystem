@@ -12,7 +12,7 @@ import java.util.Date;
 public class AddStudentResponse {
     private Long id;
     private String name;
-    private String age;
+    private int age;
     private String gender;
     private String email;
     private Date createdDate;
