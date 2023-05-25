@@ -13,14 +13,19 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AddStudentRequest {
+    private Long id;
     private String name;
-    private String nationality;
+    private String age;
+    private String gender;
+    private String email;
 
     public Student convertToStudent () {
         Date nowDate = new Date();
         Student student = new Student();
         student.setName(this.getName());
-        student.setNationality(this.getNationality());
+        student.setGender(this.getGender());
+        student.setAge(this.age());
+        student.setEmail(this.email());
         student.setIsActive(true);
         student.setCreatedDate(nowDate);
         student.setUpdatedDate(nowDate);
