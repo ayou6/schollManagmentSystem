@@ -16,7 +16,7 @@ public class Student {
     private Long id;
     private String name;
     private String email;
-
+    private String gender;
 
     private Date createdDate;
     private Boolean isActive;
