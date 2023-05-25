@@ -15,6 +15,7 @@ public class Course {
     private Long id;
     private String name;
     private String Description;
+    private String code;
     @OneToOne
     Teacher teacher;
     @ManyToOne
