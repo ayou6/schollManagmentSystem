@@ -15,7 +15,7 @@ import java.util.Date;
 public class AddStudentRequest {
     private Long id;
     private String name;
-    private String age;
+    private int age;
     private String gender;
     private String email;
 
@@ -24,8 +24,8 @@ public class AddStudentRequest {
         Student student = new Student();
         student.setName(this.getName());
         student.setGender(this.getGender());
-        student.setAge(this.age());
-        student.setEmail(this.email());
+        student.setAge(this.getAge());
+        student.setEmail(this.getEmail());
         student.setIsActive(true);
         student.setCreatedDate(nowDate);
         student.setUpdatedDate(nowDate);
