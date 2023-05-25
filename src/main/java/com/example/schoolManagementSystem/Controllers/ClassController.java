@@ -30,8 +30,9 @@ public class ClassController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteClass (@RequestBody ClassRoom classRoom, @PathVariable Long id){
-        return classServices.deleteClass(id);
+    public String deleteClass(@PathVariable Long id) {
+        classServices.deleteClass(id);
+        return "ClassRoom Deleted";
     }
 }
 
