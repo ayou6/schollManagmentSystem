@@ -17,7 +17,7 @@ public class Student {
     private String name;
     private String email;
     private String gender;
-
+    private int age;
     private Date createdDate;
     private Boolean isActive;
     private Date updatedDate;
