@@ -30,6 +30,6 @@ public class TeacherServices {
         return teacherRepository.save(teacher);
     }
 
-    public void deleteClass(Long id) { teacherRepository.deleteById(id);}
+    public void deleteTeacher(Long id) { teacherRepository.deleteById(id);}
 
 }
