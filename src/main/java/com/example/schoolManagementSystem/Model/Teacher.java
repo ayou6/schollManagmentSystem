@@ -14,7 +14,7 @@ public class Teacher {
     private Long id;
     private String name;
     private int phone;
-    private String courseName;
+    private String Specialization;
     @OneToOne
     Course course;
 }
