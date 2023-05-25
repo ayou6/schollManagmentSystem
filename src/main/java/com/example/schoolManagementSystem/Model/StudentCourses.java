@@ -14,4 +14,5 @@ public class StudentCourses {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int grades;
+    private boolean isActive;
 }
