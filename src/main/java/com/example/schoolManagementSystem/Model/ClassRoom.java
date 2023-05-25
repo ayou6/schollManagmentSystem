@@ -12,6 +12,7 @@ public class ClassRoom {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String classNo;
+    private int size;
     @OneToMany
     List<Course> courses;
 }
