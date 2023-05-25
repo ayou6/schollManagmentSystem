@@ -37,7 +37,7 @@ public class TeacherController {
 
     @DeleteMapping("/delete/{id}")
     public String deleteClass(@PathVariable Long id) {
-        teacherServices.deleteClass(id);
+        teacherServices.deleteTeacher(id);
         return "Teacher Deleted";
     }
 }
