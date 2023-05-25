@@ -17,5 +17,9 @@ public class AddCourseRequest {
     private String description;
     private String code;
     private boolean isActive;
+    private Teacher teacher;
 
+    public Course convertToCourse() {
+
+    }
 }
