@@ -20,6 +20,12 @@ public class AddCourseRequest {
     private Teacher teacher;
 
     public Course convertToCourse() {
-
+        Course course = new Course();
+        course.setName(this.getName());
+        course.setDescription(this.getDescription());
+        course.setCode(this.getCode());
+        course.setActive(true);
+        course.setTeacher(this.getTeacher());
+        return course;
     }
 }
