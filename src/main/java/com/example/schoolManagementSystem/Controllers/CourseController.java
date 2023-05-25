@@ -36,8 +36,9 @@ public class CourseController {
         return courseServices.editCourse(newCourse,id);
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteCourse (@RequestBody Course course, @PathVariable Long id){
-        return courseServices.deleteCourse(id);
+    public String deleteCourse(@PathVariable Long id) {
+        courseServices.deleteCourse(id);
+        return "Course Deleted";
     }
 
 }
