@@ -18,6 +18,7 @@ public class AddStudentRequest {
     private int age;
     private String gender;
     private String email;
+    private boolean isActive;
 
     public Student convertToStudent () {
         Date nowDate = new Date();
