@@ -16,6 +16,7 @@ public class Course {
     private String name;
     private String Description;
     private String code;
+    private boolean isActive;
     @OneToOne
     Teacher teacher;
     @ManyToOne
