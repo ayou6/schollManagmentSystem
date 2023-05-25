@@ -38,7 +38,7 @@ public class StudentController {
                 savedStudent.getGender(),
                 savedStudent.getEmail(),
                 savedStudent.getCreatedDate());
-            return response;}
+        return response;}
 
     @DeleteMapping("/delete/{id}")
 
