@@ -41,10 +41,10 @@ public class StudentController {
         return response;}
 
     @DeleteMapping("/delete/{id}")
-
-
-    public ResponseEntity<Void> deleteStudent (@RequestBody Student student, @PathVariable Long id){
-        return studentServices.deleteStudent(id);
+    public String deleteStudent(@PathVariable Long id) {
+        studentServices.deleteStudent(id);
+        return "Student Deleted";
     }
 }
+
 
