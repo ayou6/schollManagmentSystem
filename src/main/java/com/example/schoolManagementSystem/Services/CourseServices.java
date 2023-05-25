@@ -29,7 +29,5 @@ public class CourseServices {
         course.setId(id);
         return courseRepository.save(course);
     }
-    public ResponseEntity<Void> deleteCourse (Long id){
-        courseRepository.deleteById(id);
-        return ResponseEntity.noContent().build();     }
+    public void deleteCourse(Long id) { courseRepository.deleteById(id);}
 }
