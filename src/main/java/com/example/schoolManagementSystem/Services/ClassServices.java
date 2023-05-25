@@ -23,9 +23,7 @@ public class ClassServices {
         return classRepository.save(classroom);
     }
 
-    public void deleteClass(Long id) {
-        classRepository.deleteById(id);
-    }
+    public void deleteClass(Long id) { classRepository.deleteById(id);}
 
 }
 
